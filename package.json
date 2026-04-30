@@ -1,0 +1,62 @@
+{
+  "name": "a11y-cdp-plugin",
+  "version": "0.0.0",
+  "description": "Web Test Runner plugin that fetches the accessibility tree via CDP, replacing the deprecated page.accessibility.snapshot() API.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "a11y-cdp-plugin.js",
+  "types": "a11y-cdp-plugin.d.ts",
+  "exports": {
+    ".": {
+      "types": "./a11y-cdp-plugin.d.ts",
+      "default": "./a11y-cdp-plugin.js"
+    }
+  },
+  "files": [
+    "a11y-cdp-plugin.js",
+    "a11y-cdp-plugin.d.ts",
+    "a11y-cdp-plugin.d.ts.map"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:test": "tsc -p tsconfig.test.json",
+    "test": "npm run build && npm run build:test && web-test-runner",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@web/test-runner-core": ">=0.11.0",
+    "@web/test-runner-playwright": ">=0.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@web/test-runner-core": {
+      "optional": false
+    },
+    "@web/test-runner-playwright": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.31.0",
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@types/mocha": "^10.0.10",
+    "@web/test-runner": "^0.20.2",
+    "@web/test-runner-commands": "^0.9.0",
+    "@web/test-runner-core": "^0.13.4",
+    "@web/test-runner-playwright": "^0.11.1",
+    "typescript": "^5.8.3"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "cdp",
+    "chrome-devtools-protocol",
+    "web-test-runner",
+    "playwright",
+    "testing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeroedin/a11y-cdp-plugin.git"
+  }
+}

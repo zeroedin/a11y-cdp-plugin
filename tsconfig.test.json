@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": false,
+    "declarationMap": false,
+    "types": ["mocha"]
+  },
+  "include": [
+    "a11y-cdp-plugin.ts",
+    "test/**/*.ts"
+  ]
+}
