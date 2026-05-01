@@ -57,6 +57,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zeroedin/a11y-cdp-plugin.git"
+    "url": "git+https://github.com/zeroedin/a11y-cdp-plugin.git"
   }
 }
